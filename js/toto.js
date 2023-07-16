@@ -1,0 +1,1 @@
+const toto =()=> {alert('click!')  }
