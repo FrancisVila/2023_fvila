@@ -51,6 +51,30 @@ div.next_prev_post a:hover{
 .prev_post {
   left: 10px;
 }
+div.single_featured_image  {
+  text-align: center;
+
+}
+
+img.single_featured_image {
+  max-width:80vw;
+  max-height: 80vh;
+  padding-top:5vh; padding-bottom: 5vh;
+  padding-left:5vw; padding-right: 5vw;
+  background-color: #fff;
+  border: 10px solid #D8C7B4;
+  box-shadow: rgba(0, 0, 0, 0.30) -2px 4px 10px -1px inset, rgba(0, 0, 0, 0.57) -2px 10px 25px -1px;
+}
+
+.single_title {
+  text-align: center;
+font-size: 20px;
+margin-top: 0;
+margin-bottom: 0;
+position: relative;
+top: 32px;
+color: #AAA;
+}
 
 div.main_image {
   display: flex;
@@ -1133,13 +1157,18 @@ slide-in {
 
 
 /* hover on image, show text in white  start */
-  
+
+.chevron {
+  font-size: 100px;
+  color:#888;
+}
 
 /*  Chevron start */
 .chevron_before_item  {
     position: fixed;
     left: 1rem;
     top: 50wv;
+
 }
 .chevron_before::before {content: '<span class="chevron_before_item">&lt;</span>'; }
 .chevron_before:first-child .chevron_before_item {display:none}

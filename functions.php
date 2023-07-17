@@ -221,42 +221,69 @@ function artworks() {
 
 
 function fv_show_other_images($post) {
-get_post_meta($post->ID);
-$fimage   = get_the_post_thumbnail( $post->ID, 'thumbnail' );
-$image_a  = get_field('featured_image_field');
-$image_2  = get_field("image_2");
-$image_3  = get_field("image_3");
-$image_4  = get_field("image_4");
-$image_5  = get_field("image_5");
-$image_6  = get_field("image_6");
-$image_7  = get_field("image_7");
-$image_8  = get_field("image_8");
-$image_9  = get_field("image_9");
-$image_10 = get_field("image_10");
-$other_images_title = "";
-if ($image_2 or $image_3 or $image_4 or $image_5 or $image_6 or $image_7 or $image_8 or $image_9 or $image_10)
-    {$other_images_title = '<h2>Dessins préparatoires, autres vues... </h2>'; }
-if ($image_2) {$image_2 = '<img src="' . $image_2 . '" class="more_images" />' ;}
-if ($image_3) {$image_3 = '<img src="' . $image_3 . '" class="more_images" />' ;}
-if ($image_4) {$image_4 = '<img src="' . $image_4 . '" class="more_images" />' ;}
-if ($image_5) {$image_5 = '<img src="' . $image_5 . '" class="more_images" />' ;}
-if ($image_6) {$image_6 = '<img src="' . $image_6 . '" class="more_images" />' ;}
-if ($image_7) {$image_7 = '<img src="' . $image_7 . '" class="more_images" />' ;}
-if ($image_8) {$image_8 = '<img src="' . $image_8 . '" class="more_images" />' ;}
-if ($image_9) {$image_9 = '<img src="' . $image_9 . '" class="more_images" />' ;}
-if ($image_10) {$image_10 = '<img src="' . $image_10 . '" class="more_images" />' ;}
-$next_post = get_next_post_link( $format = '%link',  $link = '&rsaquo;' );
-$prev_post = get_previous_post_link($format = '%link',  $link = '&lsaquo;' );
-$output = <<<EOD
-<h2 class="more_images">Autres vues, ou images préparatoires</h2>
-   <div class="more_images">
-   $image_2 $image_3 $image_4 $image_5 $image_6 $image_7 $image_8 $image_9 $image_10
-   </div>
-EOD;
-echo $output;
+	$output = fv_get_other_images($post);
+	echo $output;
 }
 
-function fv_artworks($type) {
+function fv_get_other_images($post) {
+	get_post_meta($post->ID);
+	$fimage   = get_the_post_thumbnail( $post->ID, 'thumbnail' );
+	$image_a  = get_field('featured_image_field');
+	$image_2  = get_field("image_2");
+	$image_3  = get_field("image_3");
+	$image_4  = get_field("image_4");
+	$image_5  = get_field("image_5");
+	$image_6  = get_field("image_6");
+	$image_7  = get_field("image_7");
+	$image_8  = get_field("image_8");
+	$image_9  = get_field("image_9");
+	$image_10 = get_field("image_10");
+	$other_images_title = "";
+	if ($image_2 or $image_3 or $image_4 or $image_5 or $image_6 or $image_7 or $image_8 or $image_9 or $image_10)
+		{$other_images_title = '<h2>Dessins préparatoires, autres vues... </h2>'; }
+	if ($image_2) {$image_2 = '<img src="' . $image_2 . '" class="more_images" />' ;}
+	if ($image_3) {$image_3 = '<img src="' . $image_3 . '" class="more_images" />' ;}
+	if ($image_4) {$image_4 = '<img src="' . $image_4 . '" class="more_images" />' ;}
+	if ($image_5) {$image_5 = '<img src="' . $image_5 . '" class="more_images" />' ;}
+	if ($image_6) {$image_6 = '<img src="' . $image_6 . '" class="more_images" />' ;}
+	if ($image_7) {$image_7 = '<img src="' . $image_7 . '" class="more_images" />' ;}
+	if ($image_8) {$image_8 = '<img src="' . $image_8 . '" class="more_images" />' ;}
+	if ($image_9) {$image_9 = '<img src="' . $image_9 . '" class="more_images" />' ;}
+	if ($image_10) {$image_10 = '<img src="' . $image_10 . '" class="more_images" />' ;}
+	$next_post = get_next_post_link( $format = '%link',  $link = '&rsaquo;' );
+	$prev_post = get_previous_post_link($format = '%link',  $link = '&lsaquo;' );
+	$output = <<<EOD
+
+	   $image_2 $image_3 $image_4 $image_5 $image_6 $image_7 $image_8 $image_9 $image_10
+
+	EOD;
+	return $output;
+	}
+
+// function fv_get_single_featured_image($post) {
+// 	$url = get_field('featured_image_field');
+// 	return $url;
+// 	// echo "toto=" . $toto;
+// 	// echo "<img src=" ;
+// 	// the_field( 'featured_image_field');
+// 	// echo  " />";
+// 	// return "<img class='single_featured_image' src='" . $url . "' />";
+// 	// $url = get_field( 'featured_image_field' );
+// 	// echo $url;
+// 	// $title = get_the_title($post);
+// 	// // renders an id (??)
+// 	// // $fimage = get_post_field( 'featured_image_field', $post );
+// 	// echo the_field('featured_image_field');
+// 	// return;
+// 	// return "VVV<img class='main_image' src='$src' />XXX";
+// 	// return "<img class='main_image' src=\"". the_field('featured_image_field') . "\" />" ;
+// } 
+
+// function fv_show_single_featured_image($post) {
+// 	 echo fv_get_single_featured_image($post);
+// }
+
+function fv_artworks($type='sculpture') {
 	$tax_arr = array( 1, 2, 3, 4, 5,6, 7, 8, 9 );
 	$the_query = new WP_Query( array(
 		'post_type' => 'artwork',
@@ -264,7 +291,7 @@ function fv_artworks($type) {
 			array (
 				'taxonomy' => 'artwork',
 				'field' => 'name',
-				'terms' => 'sculpture',
+				'terms' => $type,
 			)
 		),
 	) );
@@ -277,13 +304,13 @@ function fv_artworks($type) {
 		$title = get_the_title();
 		$fimage = get_post_field( 'featured_image_field' );
 		the_field( 'featured_image_field' );
-		echo ('<h1>BBBBBBB</h1>');
 		echo "<img src=\"". the_field('featured_image_field') . "\" />" ;
-		echo ('<h1>CCC</h1>');
 		echo($title);
 		$url = get_field( 'featured_image_field' );
 		$img = "<img src='". $url . "' />";
+		echo "iii";
 		echo $url;
+		echo "iii";
 		?>
 		<img src="<?php the_field( 'featured_image_field' )?>" /> 
 		<?php
@@ -315,12 +342,12 @@ function fv_artworks($type) {
 				<?php endforeach; ?>
 			</ul>
 		<?php endif;
-		echo $fields;
+		// echo $fields;
 		echo $fields['artwork'] ? 'true' : 'false';
 		echo $fields['artwork'] ? 'true' : 'false';
 		echo $fields['artwork'] ? 'true' : 'false';
 		if( $fields and $fields['artwork'] ): 
-			echo $fields('artwork');
+			echo $fields['artwork'];
 			echo ('<h1>GGGGGGG</h1>');
 			 foreach( $fields as $name => $value ): 
 				echo '<ul><li>';
