@@ -1,9 +1,27 @@
 <?php
 
+function theme_scripts() {
+	wp_register_script( 'toto', get_theme_root_uri() . '/2023_fvila/js/toto.js' ); 
+    wp_enqueue_script( 'toto' );
+    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array('jquery'),'1.0.0',true  ); 
+    wp_enqueue_script( 'jquery' );
+
+	wp_register_script( 'gallery', get_theme_root_uri() . '/2023_fvila/js/gallery.js'  ); 
+    wp_enqueue_script( 'gallery' );
+	wp_enqueue_script( 'media-upload' );
+    wp_enqueue_script( 'thickbox' );
+    wp_enqueue_style( 'thickbox' );
+	wp_register_script( 'isotope', get_theme_root_uri() . '/2023_fvila/js/isotope.pkgd.min.js'  );
+	wp_enqueue_style( 'isotope' );
+}
+theme_scripts();
+add_action('wp_enqueue_scripts', 'theme_scripts');
+wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
+// echo '<script>console.log(\"postcount = $postcount\")</script>';
+add_action( 'wp_enqueue_style', 'my_theme_enqueue_styles' );
+do_action( 'wp_enqueue_style' );
 function get_url_from_thumbnail_id($id, $size='medium') {
-	echo "in get_url_from_thumbnail_id $id=".$id . " ";
 	$post_thumbnail_id = get_post_thumbnail_id($id);
-	echo $post_thumbnail_id;
 	$large_image_url_array = wp_get_attachment_image_src( $post_thumbnail_id);
 	if ($large_image_url_array) {
 		return $large_image_url_array[0];
@@ -41,7 +59,6 @@ function render_recent_post_featured_image_with_condition($post_type, $meta_key,
         $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
 		$id = get_the_ID();
 		$url = get_url_from_thumbnail_id($id, 'medium');
-		echo $url;
 		$large_image_url_array = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
         $post_thumbnail_url = wp_get_attachment_image_src($post_thumbnail_id, 'full');
 		echo esc_url($post_thumbnail_url[0]);
@@ -134,22 +151,7 @@ my_enqueue_scripts();
 add_shortcode( 'my_media_button', 'my_media_button_shortcode' );
 
 
-function theme_scripts() {
-    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array('jquery'),'1.0.0',true  ); 
-    wp_enqueue_script( 'jquery' );
-    wp_register_script( 'toto', get_theme_root_uri() . '/Pure_fvila/js/toto.js', '', '', true  ); 
-    wp_enqueue_script( 'toto' );
-	wp_register_script( 'gallery', get_theme_root_uri() . '/Pure_fvila/js/gallery.js', '', '', true  ); 
-    wp_enqueue_script( 'gallery' );
-	wp_enqueue_script( 'media-upload' );
-    wp_enqueue_script( 'thickbox' );
-    wp_enqueue_style( 'thickbox' );
-}
-add_action('wp_enqueue_scripts', 'theme_scripts');
-wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
-// echo '<script>console.log(\"postcount = $postcount\")</script>';
-add_action( 'wp_enqueue_style', 'my_theme_enqueue_styles' );
-do_action( 'wp_enqueue_style' );
+
 
 
 function php_log($message) {
