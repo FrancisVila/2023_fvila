@@ -1,4 +1,3 @@
-alert("ZZZZZZZZZZZZ")
 
 const toto =()=> {alert('click!')  }
 
@@ -20,5 +19,5 @@ var $grid = $('.grid').isotope({
     $grid.isotope('layout');
   });
 
- 
+  $grid()
   
