@@ -370,14 +370,16 @@ text-align: center;}
 		.home_container {
 			top: 0vh;
 	height: 90vh;
-			left:25%;
-			width: 50%;
+			left:10%;
+			width: 80%;
 	}
   div.home_body > div.home_container .logo_item_simple {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+    width: 60%;
+    margin-left: 20%;
   }
   .logo_item_simple img {
     width: 100%;
@@ -393,6 +395,8 @@ text-align: center;}
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+    width: 60%;
+    margin-left: 20%;
   }
 
   .home_item {
@@ -400,8 +404,8 @@ text-align: center;}
 		.home_container {
 			top: 0vh;
 	height: 90vh;
-			left:20%;
-			width: 60%;
+  left:10%;
+  width: 80%;
 	}
   .logo_item_simple img {
     width: 100%;
