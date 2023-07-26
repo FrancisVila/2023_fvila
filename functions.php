@@ -126,6 +126,7 @@ add_action( 'init', 'cptui_register_my_taxes_artwork' );
 
 function my_enqueue_scripts() {
     wp_enqueue_media();
+	
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_scripts' );
 
@@ -163,6 +164,9 @@ function my_theme_enqueue_styles() {
 	// EXPLANATION: parent-style comes from the local style.css 
 	// Template: parent-style
 	wp_enqueue_style( 'parent-style', get_stylesheet_directory_uri() .'/style.css' );
+	// from https://wordpress.stackexchange.com/questions/136971/modify-the-wordpress-admin-bar-css
+	// avoid margin top of page
+	add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 	
 }
 

@@ -17,6 +17,25 @@ body {
   font-family: sans-serif;
 }
 
+.color1 {
+  background-color: #D5F5EF;
+}
+.color2 {
+  background-color: #D5D7F5;
+}
+.color3 {
+  background-color: #F5D5F0;
+}
+.color4 {
+  background-color: #E1F6D4;
+}
+.color5 {
+  background-color: #F8E2D2;
+}
+.color6 {
+  background-color: #F4F6D4;
+}
+
 .logo_item img {
   width: 40%;
 }
@@ -47,7 +66,7 @@ justify-content: center;
 }
 
 .logo_item_simple img {
-  width: 44%;
+  width: 55%;
   
 }
 
@@ -105,7 +124,7 @@ padding-right: 100px;
 
 .grid-sizer,
 .grid-item {
-  width: 400px;
+  width: 200px;
 }
 
 .grid {
@@ -259,8 +278,8 @@ div.main_image p.description {
 
 .home_container {
 	position: absolute;
-	top: 20vh;
-	height:60vh;
+	top: 5vh;
+	height:80vh;
 	left: 20vw;
 	width: 60vw;
 
@@ -270,25 +289,25 @@ div.main_image p.description {
 }
 
 
-
 .home_item {
-	flex-grow : 1;
-	/* border: 2px solid #000; */
-
-	height: calc(50% - 20px);
-	width: calc(33% - 40px);
-	margin: 5px;
-    background-size: cover;
-    background-color: #DDDDDD;
-    border-radius: 10px;
-    cursor: pointer;
-    background-position: center;
-  
-    
+padding-top:30px; padding-bottom:30px;
+padding-left:10px; padding-right:10px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .home_item > .inner {
-  padding-top: 30px; width: 100%; height: 100%
+    margin:10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+  ;}
+
+  .home_item > .inner > img.category {
+    width:60%;
   ;}
 
 .home_item > .inner > * {
@@ -310,6 +329,7 @@ text-align: center;}
     /* background-color: #F00; /* red */
 			height: calc(100% - 20px);
 	width: calc(20% - 25px);
+  
   }
 	.home_container {
 		left: 5vw;
@@ -321,20 +341,21 @@ text-align: center;}
 @media (max-aspect-ratio:2) {
   .home_item {
     /* background-color: #FF8800; /* orange */
-			height: calc(50% - 10px);
-	width: calc(33% - 25px);
+			height: calc(40% - 30px);
+	width: calc(33% - 80px);
+  margin: 30px;
   }
 	.home_container {
-			left: 10vw;
-	width: 80vw;
+			left: 2vw;
+	width: 96vw;
 	}
 }
 
 @media (max-aspect-ratio:1) {
   .home_item {
     /* background-color: #DDD; /* gray */
-			height: calc(33% - 10px);
-	width: calc(50% - 25px);
+			height: calc(25% - 10px);
+	width: calc(50% - 60px);
   }
 }
 
@@ -347,22 +368,44 @@ text-align: center;}
 	width: calc(100% - 40px);
   }
 		.home_container {
-			top: 5vh;
+			top: 0vh;
 	height: 90vh;
 			left:25%;
 			width: 50%;
 	}
+  div.home_body > div.home_container .logo_item_simple {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .logo_item_simple img {
+    width: 100%;
+  }
 }
 
+
+
+
 @media (max-aspect-ratio: 1/3) {
+  div.home_body > div.home_container .logo_item_simple {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .home_item {
   }
 		.home_container {
-			top: 5vh;
+			top: 0vh;
 	height: 90vh;
 			left:20%;
 			width: 60%;
 	}
+  .logo_item_simple img {
+    width: 100%;
+  }
 }
 
 
@@ -460,8 +503,13 @@ div.ascendoor-wrapper, div.ascendoor-page {
     margin-right: auto;
 	}
 	
-	.shadow {
-	 box-shadow: 5px 5px 5px #555555; }
+	.outer_inner_shadow {
+    box-shadow: rgba(0, 0, 0, 0.30) -2px 10px 25px -1px , rgba(0, 0, 0, 0.20) -2px 4px 10px -1px inset;
+  }
+
+  .inner_shadow {
+    box-shadow: rgba(0, 0, 0, 0.20) -2px 4px 10px -1px inset;
+  }
 	
 	div.hor_align{
 		display: block;
@@ -1238,11 +1286,11 @@ clear:both;
     display:none;
 }
 /* for more, click here: http://www.debray-jerome.fr/outils/Generateur-de-box-shadow-css3.html */
--moz-box-shadow: 3px 3px 5px 0px #9b9b9b;
+/* -moz-box-shadow: 3px 3px 5px 0px #9b9b9b;
 -webkit-box-shadow: 3px 3px 5px 0px #9b9b9b;
 -o-box-shadow: 3px 3px 5px 0px #9b9b9b;
 box-shadow: 3px 3px 5px 0px #9b9b9b;
-filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=135, Strength=5);
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=135, Strength=5); */
 
 /* slide-in start (from chatgpt) */
 slide-in {
