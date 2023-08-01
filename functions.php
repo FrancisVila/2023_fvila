@@ -1,6 +1,15 @@
 <?php
+// Register Theme Features
+function custom_theme_features()  {
 
+    // Add theme support for Featured Images
+    add_theme_support( 'post-thumbnails' );
+}
+
+// Hook into the 'after_setup_theme' action
+add_action( 'after_setup_theme', 'custom_theme_features' );
 function theme_scripts() {
+	
 	wp_register_script( 'toto', get_theme_root_uri() . '/2023_fvila/js/toto.js' ); 
     wp_enqueue_script( 'toto' );
     wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array('jquery'),'1.0.0',true  ); 
@@ -21,12 +30,15 @@ wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
 add_action( 'wp_enqueue_style', 'my_theme_enqueue_styles' );
 do_action( 'wp_enqueue_style' );
 function get_url_from_thumbnail_id($id, $size='medium') {
-	$post_thumbnail_id = get_post_thumbnail_id($id);
+	echo ' id='.$id;
+	$post_thumbnail_id = get_post_thumbnail_id($id, 'thumbnail');
+	echo ' post_thumbnail_id=' . $post_thumbnail_id;
 	$large_image_url_array = wp_get_attachment_image_src( $post_thumbnail_id);
+	
 	if ($large_image_url_array) {
 		return $large_image_url_array[0];
 	}
-	else return "AAAAAA";
+	else return " AAAAAA ";
 }
 
 
@@ -308,6 +320,9 @@ function fv_artworks($type='sculpture') {
 		echo ('<h1>AAAAAAAAA</h1>');
 		$the_query->the_post();
 		$title = get_the_title();
+		echo $title;
+		echo $title;
+		echo $title;
 		$fimage = get_post_field( 'featured_image_field' );
 		the_field( 'featured_image_field' );
 		echo "<img src=\"". the_field('featured_image_field') . "\" />" ;

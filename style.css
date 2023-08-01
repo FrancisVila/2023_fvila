@@ -36,6 +36,12 @@ body {
   background-color: #F4F6D4;
 }
 
+.dernieres {
+  width: 80%;
+  margin-left: 10%;
+  margin-top:5%;
+}
+
 .logo_item img {
   width: 40%;
 }
@@ -146,7 +152,7 @@ padding-right: 100px;
   max-width: 100%;
 }
 
-img {width:400px;}
+
 img{
 	/* for more, click here: http://www.debray-jerome.fr/outils/Generateur-de-box-shadow-css3.html */
 /* -moz-box-shadow: 3px 3px 5px 0px #9b9b9b;
@@ -301,14 +307,49 @@ justify-content: center;
     margin:10%;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     height:100%;
   ;}
 
+  .home_item.dernieres > .inner {
+width:100%;
+margin:5%;
+  ;}
+
   .home_item > .inner > img.category {
     width:60%;
-  ;}
+   }
+
+
+   .home_item > .inner img.dernieres {
+    object-fit: cover;
+width: 20vmin;
+height: 20vmin;
+margin: 2vw;
+   }
+
+  .home_item.dernieres > .inner > img.category {
+    width:50%;
+    margin:5%;
+    max-width: 200px;
+      ;}
+
+      .home_item.dernieres {
+        height: auto;
+      }
+
+      .dernieres_category {
+        width:100%;
+        display: flex;
+justify-content: center;
+
+      }
+
+      .home_item.dernieres > .inner > .dernieres_category > img.category {
+        max-width: 150px;
+      }
 
 .home_item > .inner > * {
     opacity:0.7;
@@ -324,11 +365,12 @@ width: 100%;
 text-align: center;}
 
 
-@media (min-aspect-ratio: 2) {
+@media (min-aspect-ratio: 2.5) {
   .home_item {
     /* background-color: #F00; /* red */
 			height: calc(100% - 20px);
-	width: calc(20% - 25px);
+	width: calc(20% - 50px);
+  margin-right:2px;
   
   }
 	.home_container {
@@ -338,7 +380,7 @@ text-align: center;}
 }
 
 
-@media (max-aspect-ratio:2) {
+@media (max-aspect-ratio:2.5) {
   .home_item {
     /* background-color: #FF8800; /* orange */
 			height: calc(40% - 30px);
