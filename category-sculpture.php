@@ -1,4 +1,4 @@
-<h1>MMMMMMMMMMMMMM </h1>
+
 <?php
 /* Template Name: dessin 
 Template Post Type: artwork
@@ -20,7 +20,7 @@ fv_artworks("sculpture")
 get_footer();
 ?>
 
-<h1>lllllllllllllllllllllllllll</h1>
+<h1>  </h1>
 
 <span class="debugSmall">category-dessin.php</span>
 

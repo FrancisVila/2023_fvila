@@ -317,7 +317,7 @@ function fv_artworks($type='sculpture') {
 	
 	while ( $the_query->have_posts() ) :
 		 
-		echo ('<h1>AAAAAAAAA</h1>');
+
 		$the_query->the_post();
 		$title = get_the_title();
 		echo $title;
@@ -335,30 +335,31 @@ function fv_artworks($type='sculpture') {
 		?>
 		<img src="<?php the_field( 'featured_image_field' )?>" /> 
 		<?php
-		$custom = get_post_custom();
-		foreach($custom as $key => $value) {
-  		   // echo "UUUUUUUUUUUUUU  ". $key.': '.$value.'<br />';
-		}
-		echo  "UUUUUUUUUUUUUU  ". $custom['artwork'][0];
-		$at = $custom['artwork'][0][0];
-		$at = json_decode($at);
-		foreach( $at as $name => $value ):
-			echo "custom[artwork][0] " . $name . " = " . $value ;
-		endforeach;
+		// $custom = get_post_custom();
+		// foreach($custom as $key => $value) {
+  		//    // echo "UUUUUUUUUUUUUU  ". $key.': '.$value.'<br />';
+		// }
+		// echo  "UUUUUUUUUUUUUU  ". $custom['artwork'][0];
+		// $at = $custom['artwork'][0][0];
+		// $at = json_decode($at);
+		// foreach( $at as $name => $value ):
+		// 	echo "custom[artwork][0] " . $name . " = " . $value ;
+		// endforeach;
 
 		$fields = get_fields(get_the_ID( ));
 		
 		if( $fields ): ?>
 			<ul>
+			<?php echo $value; ?>
+			<p>fields['description']=<?php echo $fields['description']; ?></p> 
+			<p>fields['featured_image_field']=<?php echo $fields['featured_image_field']; ?></p>
 				<?php foreach( $fields as $name => $value ): ?>
 					<li>ffff 
-						<b><?php echo $name; ?></b> 
+						
+						<b><?php echo $fields['description']; ?></b> 
 						
 						<?php echo $value; ?>
-						<?php if ($value) 
-							{echo $value[0]; 
-							echo $value[1];  
-							echo $value[2];} ?>
+
 					</li>
 				<?php endforeach; ?>
 			</ul>
@@ -370,19 +371,7 @@ function fv_artworks($type='sculpture') {
 		if( $fields and $fields['artwork'] ): 
 			echo $fields['artwork'];
 			echo ('<h1>GGGGGGG</h1>');
-			 foreach( $fields as $name => $value ): 
-				echo '<ul><li>';
-		            echo $name; 
-					echo ' ';
-					echo $value;
-					echo '</li><li>';
-					echo $value[0]; 
-					echo '</li><li>';
-					echo $value[1]; 
-					echo '</li><li>';
-					echo $value[2]; 
-					echo '</li></ul>';
-		    endforeach; 
+
 		  
 		endif;
 	

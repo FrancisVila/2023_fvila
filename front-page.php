@@ -12,17 +12,17 @@
 		<div class=" home_item logo_item_simple">
 			<img src="<?php echo get_template_directory_uri() ?>/images/fvila_fr3.png)">
 		</div>
-		<div class="home_item item1 grid-item outer_inner_shadow">
+		<a class="home_item item1 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/dessins">
 			<div class="inner color1 inner_shadow">
 				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/dessins.png)">
 			</div>
 
-		</div>
-		<div class="home_item item2 grid-item outer_inner_shadow">
+		</a>
+		<a class="home_item item2 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/sculpture">
 			<div class="inner color2 inner_shadow">
 				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/sculpture.png)">
 			</div>
-		</div>
+		</a>
 		<div class="home_item item3 grid-item outer_inner_shadow">
 			<div class="inner color3 inner_shadow">
 				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/numerique.png)">

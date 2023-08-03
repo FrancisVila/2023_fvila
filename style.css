@@ -542,6 +542,24 @@ div.ascendoor-wrapper, div.ascendoor-page {
     margin-right: auto;
     width: 550px !important;
 	}
+
+  .menu_item {
+    width: 70px;
+    min-width: 5vw;
+    height: 20px;
+    margin-left: 1vw;
+    min-height: 2vw;
+  }
+  .menu_container  {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu_logo  {
+    width: 60px;
+    
+  }
 	
 	.center {
 	/* see http://www.w3schools.com/css/css_align.asp */
