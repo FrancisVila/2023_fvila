@@ -9,7 +9,7 @@ function custom_theme_features()  {
 // Hook into the 'after_setup_theme' action
 add_action( 'after_setup_theme', 'custom_theme_features' );
 function theme_scripts() {
-	
+
 	wp_register_script( 'toto', get_theme_root_uri() . '/2023_fvila/js/toto.js' ); 
     wp_enqueue_script( 'toto' );
     wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array('jquery'),'1.0.0',true  ); 
@@ -22,7 +22,10 @@ function theme_scripts() {
     wp_enqueue_style( 'thickbox' );
 	wp_register_script( 'isotope', get_theme_root_uri() . '/2023_fvila/js/isotope.pkgd.min.js'  );
 	wp_enqueue_style( 'isotope' );
+	wp_register_script( 'imageload', get_theme_root_uri() . '/2023_fvila/js/imagesloaded.pkgd.js'  );
+	wp_enqueue_style( 'imageload' );
 }
+
 theme_scripts();
 add_action('wp_enqueue_scripts', 'theme_scripts');
 wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
@@ -314,93 +317,69 @@ function fv_artworks($type='sculpture') {
 		),
 	) );
 	// $query2 = new WP_Query(array('artwork' => 8));
-	
+	echo '<div class="home_container">';
 	while ( $the_query->have_posts() ) :
 		 
 
 		$the_query->the_post();
 		$title = get_the_title();
-		echo $title;
-		echo $title;
-		echo $title;
 		$fimage = get_post_field( 'featured_image_field' );
-		the_field( 'featured_image_field' );
-		echo "<img src=\"". the_field('featured_image_field') . "\" />" ;
-		echo($title);
+		// the_field( 'featured_image_field' ); // echoes url of featured image 
 		$url = get_field( 'featured_image_field' );
-		$img = "<img src='". $url . "' />";
-		echo "iii";
-		echo $url;
-		echo "iii";
-		?>
-		<img src="<?php the_field( 'featured_image_field' )?>" /> 
-		<?php
-		// $custom = get_post_custom();
-		// foreach($custom as $key => $value) {
-  		//    // echo "UUUUUUUUUUUUUU  ". $key.': '.$value.'<br />';
-		// }
-		// echo  "UUUUUUUUUUUUUU  ". $custom['artwork'][0];
-		// $at = $custom['artwork'][0][0];
-		// $at = json_decode($at);
-		// foreach( $at as $name => $value ):
-		// 	echo "custom[artwork][0] " . $name . " = " . $value ;
-		// endforeach;
-
-		$fields = get_fields(get_the_ID( ));
-		
-		if( $fields ): ?>
-			<ul>
-			<?php echo $value; ?>
-			<p>fields['description']=<?php echo $fields['description']; ?></p> 
-			<p>fields['featured_image_field']=<?php echo $fields['featured_image_field']; ?></p>
-				<?php foreach( $fields as $name => $value ): ?>
-					<li>ffff 
-						
-						<b><?php echo $fields['description']; ?></b> 
-						
-						<?php echo $value; ?>
-
-					</li>
-				<?php endforeach; ?>
-			</ul>
-		<?php endif;
-		// echo $fields;
-		echo $fields['artwork'] ? 'true' : 'false';
-		echo $fields['artwork'] ? 'true' : 'false';
-		echo $fields['artwork'] ? 'true' : 'false';
-		if( $fields and $fields['artwork'] ): 
-			echo $fields['artwork'];
-			echo ('<h1>GGGGGGG</h1>');
-
-		  
-		endif;
-	
+		$output = <<<EOD
+			<a class=" item1 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/dessins">
+				<div class="inner color1 inner_shadow">
+					<img class="category" src="$url">
+				</div>
+			</a>
+		EOD;
+		echo $output;
 
 
 
 	endwhile;
-	
+	echo '</div>';
 
-	wp_reset_postdata();
 
-	$artworks = get_posts(array(
+}
+
+function fv_artworks2($type='sculpture') {
+	$tax_arr = array( 1, 2, 3, 4, 5,6, 7, 8, 9 );
+	$the_query = new WP_Query( array(
 		'post_type' => 'artwork',
-		'meta_query' => 
-		 array(
-			   'key' => 'artwork', // name of custom field
-			   'value' => 'sculpture', // matches exaclty "123", not just 123. This prevents a match for "1234",
-			   'posts_per_page'    => -1,
-				   )
-		 ));
+		'tax_query' => array(
+			array (
+				'taxonomy' => 'artwork',
+				'field' => 'name',
+				'terms' => $type,
+			)
+		),
+	) );
+	// $query2 = new WP_Query(array('artwork' => 8));
+	echo '<div class="category_container ">';
+	while ( $the_query->have_posts() ) :
+		$the_query->the_post();
+		$title = get_the_title();
+		$fimage = get_post_field( 'featured_image_field' );
+		// the_field( 'featured_image_field' ); // echoes url of featured image 
+		$url = get_field( 'featured_image_field' );
+		$output = <<<EOD
+		<div class="grid">
+		<div class="grid-sizer"></div>
+		<div class="grid-item">
+		  <div class="inner">
+		  <img src="$url"  class="category" />
+			  <p class="comments anim1">xxxxxxx </p>
+			  <p class="comments comments2 anim2">ttt </p>
+			  </div>
+		</div>
+		</div>
+		EOD;
+		echo $output;
+	endwhile;
+	echo '</div>';
 
-		   if ( have_posts() ) 
-		   while ( have_posts() )
-		   {the_post();
-			$title = get_the_title();
-			echo ('<h1>OOOOOOOOO</h1>');
-			echo($title);
-		}
-		wp_reset_postdata();
+
 }
 
 function fv_art_gallery($category) {

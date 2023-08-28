@@ -128,16 +128,13 @@ padding-right: 100px;
 
 /* ---- .grid-item ---- */
 
-.grid-sizer,
-.grid-item {
-  width: 200px;
-}
+
 
 .grid {
   margin: 0 auto;
 }
 
-.home_body .home_container .grid-item {
+ .home_container .grid-item, .category_container .grid-item {
 
 	/* padding:50px;
 	margin: 50px; */
@@ -295,34 +292,39 @@ div.main_image p.description {
 }
 
 
-.home_item {
+.home_item, .category_container {
 padding-top:30px; padding-bottom:30px;
 padding-left:10px; padding-right:10px;
 display: flex;
 align-items: center;
 justify-content: center;
+background-color: #fff;
 }
 
-.home_item > .inner {
+.home_item.logo_item_simple, .category_container.logo_item_simple {background: none;}
+
+.home_item > .inner, .category_container  .inner {
     margin:10%;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height:100%;
+
+    width:100%;
   ;}
+
 
   .home_item.dernieres > .inner {
 width:100%;
 margin:5%;
   ;}
 
-  .home_item > .inner > img.category {
+  .home_item > .inner > img.category, .category-item  .inner > img.category {
     width:60%;
    }
 
-
+   
    .home_item > .inner img.dernieres {
     object-fit: cover;
 width: 20vmin;
@@ -342,16 +344,17 @@ margin: 2vw;
 
       .dernieres_category {
         width:100%;
+        height:400px;;
         display: flex;
 justify-content: center;
-
+margin-top: 100px;
       }
 
       .home_item.dernieres > .inner > .dernieres_category > img.category {
-        max-width: 150px;
+        
       }
 
-.home_item > .inner > * {
+.home_item > .inner > * , .category-item .inner > *{
     opacity:0.7;
     color:#444;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff;
@@ -1443,3 +1446,27 @@ slide-in {
 .chevron_after::before {content: '<span class="chevron_after_item">&gt;</span>'; }
 .chevron_after:last-child .chevron_after_item {display:none}
 /*  Chevron end */
+
+
+
+/* .category_container .grid-item {
+  float: left;
+ margin: 50px;
+ background-color: #ddd;
+ box-shadow: -8px -8px 15px 0px #FFFFFFDD;
+ } */
+ /* .category_container  .inner {
+   
+     border-top:10px outset #EEE;
+ border-right:10px outset #ddd;
+ border-bottom:10px outset #AAA;
+ border-left:10px outset #FFF;
+ box-shadow: 6px 6px 10px -7px #000000DD;
+ }
+ 
+ .category_container  .grid-item img {
+   display: block;
+   max-width: 100%;
+ }
+  */
+ /* .category_container  img {width:300px;} */
