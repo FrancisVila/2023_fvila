@@ -1,7 +1,10 @@
+jQuery(document).ready(function($) {
+  // Code that uses jQuery's $ can follow here.
+
 // external js: isotope.pkgd.js, imagesloaded.pkgd.js
 
 // init Isotope
-var $grid = jQuery('.grid2').isotope({
+var $grid = $('.grid2').isotope({
   itemSelector: '.grid-item2',
   // percentPosition: true,
   masonry: {
@@ -12,8 +15,13 @@ var $grid = jQuery('.grid2').isotope({
   }
 });
 // layout Isotope after each image loads
+
 $grid.imagesLoaded().progress( function() {
-  $grid.isotope('layout');
+  fffffffffffffff();
+  alert('yyyyyyyyyyyy');  
+  console.log('TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT')
+  // $grid.isotope('layout');
+  
 });  
 
 
@@ -30,7 +38,7 @@ $grid.imagesLoaded().progress( function() {
 // // console.log("$",$) 
 // // console.log("$ version",$.fn.jquery) // answers jQuery 3.7.0
 // // jq = jQuery.noConflict(true);
-alert('yyyyyyyyyyyy')
+
 
 
 
@@ -54,4 +62,4 @@ alert('yyyyyyyyyyyy')
 
 //   $grid
 //   toto()
-  
+});
