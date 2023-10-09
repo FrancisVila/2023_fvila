@@ -1,23 +1,57 @@
-
-const toto =()=> {alert('click!')  }
-toto()
 // external js: isotope.pkgd.js, imagesloaded.pkgd.js
 
 // init Isotope
-var $grid = $('.category_container').isotope({
-    itemSelector: '.grid',
-    // percentPosition: true,
-    masonry: {
-      // columnWidth: '.grid-sizer',
-          // gutter: 100,
-          fitWidth: true,
-          columnWidth: 400,
-    }
-  });
-  // layout Isotope after each image loads
-  $grid.imagesLoaded().progress( function() {
-    $grid.isotope('layout');
-  });
+var $grid = jQuery('.grid2').isotope({
+  itemSelector: '.grid-item2',
+  // percentPosition: true,
+  masonry: {
+    // columnWidth: '.grid-sizer',
+		// gutter: 100,
+		fitWidth: true,
+		// columnWidth: 400,
+  }
+});
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+});  
 
-  $grid()
+
+// const toto =()=> {alert('click!')  }
+
+// // external js: isotope.pkgd.js, imagesloaded.pkgd.js
+
+// // init Isotope
+
+
+// console.log("jQuery",jQuery.fn.jquery) // answers jQuery 3.7.0
+// console.log("jQuery",jQuery) 
+// // console.log("jquery",jquery) 
+// // console.log("$",$) 
+// // console.log("$ version",$.fn.jquery) // answers jQuery 3.7.0
+// // jq = jQuery.noConflict(true);
+alert('yyyyyyyyyyyy')
+
+
+
+
+// var $grid = jQuery('.category_container').isotope({
+//     itemSelector: '.grid-item',
+//     // percentPosition: true,
+//     masonry: {
+//       // columnWidth: '.grid-sizer',
+//           // gutter: 100,
+//           fitWidth: true,
+//           columnWidth: 400,
+//     }
+//   });
+ 
+//   // layout Isotope after each image loads
+//   // $grid.imagesLoaded().progress( function() {
+//   //   alert ('kkkkkkkkkkkkk');
+//   //   $grid.isotope('layout');
+//   // });
+
+//   $grid
+//   toto()
   

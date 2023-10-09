@@ -1,18 +1,19 @@
 <?php
 // Register Theme Features
-function custom_theme_features()  {
+// function custom_theme_features()  {
 
-    // Add theme support for Featured Images
-    add_theme_support( 'post-thumbnails' );
-}
+//     // Add theme support for Featured Images
+//     add_theme_support( 'post-thumbnails' );
+// }
 
-// Hook into the 'after_setup_theme' action
-add_action( 'after_setup_theme', 'custom_theme_features' );
+// // Hook into the 'after_setup_theme' action
+// add_action( 'after_setup_theme', 'custom_theme_features' );
 function theme_scripts() {
 
-	wp_register_script( 'toto', get_theme_root_uri() . '/2023_fvila/js/toto.js' ); 
-    wp_enqueue_script( 'toto' );
-    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array('jquery'),'1.0.0',true  ); 
+	// wp_dequeue_script( 'jquery');
+    // wp_deregister_script( 'jquery'); // Fatal error: Allowed memory size of 268435456 bytes exhausted (tried to allocate 262144 bytes) in C:\Users\fvila\Local Sites\fvilaphp2\app\public\wp-includes\class-wp-scripts.php on line 649
+	# wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery 
+    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js', array('jquery'),'1.0.0',true  ); 
     wp_enqueue_script( 'jquery' );
 
 	wp_register_script( 'gallery', get_theme_root_uri() . '/2023_fvila/js/gallery.js'  ); 
@@ -20,16 +21,28 @@ function theme_scripts() {
 	wp_enqueue_script( 'media-upload' );
     wp_enqueue_script( 'thickbox' );
     wp_enqueue_style( 'thickbox' );
-	wp_register_script( 'isotope', get_theme_root_uri() . '/2023_fvila/js/isotope.pkgd.min.js'  );
-	wp_enqueue_style( 'isotope' );
-	wp_register_script( 'imageload', get_theme_root_uri() . '/2023_fvila/js/imagesloaded.pkgd.js'  );
-	wp_enqueue_style( 'imageload' );
+	wp_register_script( 'isotope', '//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'  );
+	// wp_register_script( 'isotope', get_theme_root_uri() . '/2023_fvila/js/isotope.pkgd.min.js'  );
+	
+	wp_enqueue_script( 'isotope' );
+	wp_register_script( 'imageload', '//npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js'  );
+	wp_enqueue_script( 'imageload' );
+	wp_register_script( 'toto', get_theme_root_uri() . '/2023_fvila/js/toto.js' ); 
+    wp_enqueue_script( 'toto' );
 }
 
 theme_scripts();
 add_action('wp_enqueue_scripts', 'theme_scripts');
+
+function theme_scripts2() {
+
+}
+theme_scripts2();
+add_action('wp_enqueue_scripts', 'theme_scripts2');
+
 wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
-// echo '<script>console.log(\"postcount = $postcount\")</script>';
+echo '<script>console.log("postcount = $postcount")</script>';
+
 add_action( 'wp_enqueue_style', 'my_theme_enqueue_styles' );
 do_action( 'wp_enqueue_style' );
 function get_url_from_thumbnail_id($id, $size='medium') {
@@ -356,7 +369,8 @@ function fv_artworks2($type='sculpture') {
 		),
 	) );
 	// $query2 = new WP_Query(array('artwork' => 8));
-	echo '<div class="category_container ">';
+	echo '<div class="grid2 ">';
+	echo '<div class="grid-sizer2"></div>';
 	while ( $the_query->have_posts() ) :
 		$the_query->the_post();
 		$title = get_the_title();
@@ -364,16 +378,23 @@ function fv_artworks2($type='sculpture') {
 		// the_field( 'featured_image_field' ); // echoes url of featured image 
 		$url = get_field( 'featured_image_field' );
 		$output = <<<EOD
-		<div class="grid">
-		<div class="grid-sizer"></div>
-		<div class="grid-item">
-		  <div class="inner">
+		
+
+		
+		<div class="grid-item2">
+
 		  <img src="$url"  class="category" />
-			  <p class="comments anim1">xxxxxxx </p>
 			  <p class="comments comments2 anim2">ttt </p>
-			  </div>
+
 		</div>
+		<div class="grid-item2">
+
+		  <img src="$url"  class="category" />
+			  <p class="comments comments2 anim2">ttt </p>
+
 		</div>
+
+
 		EOD;
 		echo $output;
 	endwhile;
