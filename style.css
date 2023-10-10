@@ -91,8 +91,8 @@ padding-right: 100px;
   width:400px;
 }
 
-img {}
-img{
+
+.grid2 .grid-item2 img{
 	/* for more, click here: http://www.debray-jerome.fr/outils/Generateur-de-box-shadow-css3.html */
 -moz-box-shadow: 3px 3px 5px 0px #9b9b9b;
 -webkit-box-shadow: 3px 3px 5px 0px #9b9b9b;
@@ -274,11 +274,7 @@ padding-right: 100px;
   display: block;
   max-width: 100%;
   width:400px;
-  -moz-box-shadow: 3px 3px 5px 0px #9b9b9b;
--webkit-box-shadow: 3px 3px 5px 0px #9b9b9b;
--o-box-shadow: 3px 3px 5px 0px #9b9b9b;
-box-shadow: 3px 3px 5px 0px #9b9b9b;
-filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=135, Strength=5);
+  
 }
 
 
@@ -453,13 +449,10 @@ background-color: #fff;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-    width:100%;
   ;}
 
 
   .home_item.dernieres > .inner {
-width:100%;
 margin:5%;
   ;}
 
@@ -497,7 +490,7 @@ margin-top: 100px;
         
       }
 
-.home_item > .inner > * , .category-item .inner > *{
+.home_item > .inner > div , .category-item .inner > div{
     opacity:0.7;
     color:#444;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff;
@@ -514,7 +507,7 @@ text-align: center;}
 @media (min-aspect-ratio: 2.5) {
   .home_item {
     /* background-color: #F00; /* red */
-			height: calc(100% - 20px);
+			/* height: calc(100% - 20px); */
 	width: calc(20% - 50px);
   margin-right:2px;
   
@@ -529,7 +522,7 @@ text-align: center;}
 @media (max-aspect-ratio:2.5) {
   .home_item {
     /* background-color: #FF8800; /* orange */
-			height: calc(40% - 30px);
+			/* height: calc(40% - 30px); */
 	width: calc(33% - 80px);
   margin: 30px;
   }
@@ -542,7 +535,7 @@ text-align: center;}
 @media (max-aspect-ratio:1) {
   .home_item {
     /* background-color: #DDD; /* gray */
-			height: calc(25% - 10px);
+			/* height: calc(25% - 10px); */
 	width: calc(50% - 60px);
   }
 }
@@ -552,7 +545,7 @@ text-align: center;}
 @media (max-aspect-ratio: 1/2) {
   .home_item {
     /* background-color: #FF0; /* yellow */
-			height: calc(20% - 10px);
+			/* height: calc(20% - 10px); */
 	width: calc(100% - 40px);
   }
 		.home_container {
