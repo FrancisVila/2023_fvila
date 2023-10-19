@@ -20,7 +20,26 @@ $others;
 EOD;
 echo $output;
 
+$next_post_obj  = get_adjacent_post( '', '', false );
+$next_post_ID   = isset( $next_post_obj->ID ) ? $next_post_obj->ID : '';
+$last_post_class = isset( $next_post_obj->ID ) ? '' : 'hide_chevron';
+echo " next_post_ID=";
+echo $next_post_ID;
+$next_post_link     = get_permalink( $next_post_ID );
+
+$prev_post_obj  = get_adjacent_post( '', '', true );
+$prev_post_ID   = isset( $prev_post_obj->ID ) ? $prev_post_obj->ID : '';
+$first_post_class = isset( $prev_post_obj->ID ) ? '' : 'hide_chevron';
+$prev_post_link     = get_permalink( $prev_post_ID );
+echo " prev_post_ID=";
+echo $prev_post_ID;
+
+?>
+<a href="<?php echo $prev_post_link; ?>" rel="prev" class="aaa  <?php echo $first_post_class; ?> bbb pagination-prev pagination">‹</a>
+<a href="<?php echo $next_post_link; ?>" rel="next" class="aaa <?php echo $last_post_class; ?> <?php $wp_query->current_post ?>  <?php echo $last_post_class; ?> bbb pagination-next pagination">›</a>
+
 
 
 
 ?>
+<?php previous_post_link('‹'); ?>    <?php next_post_link("›"); ?>

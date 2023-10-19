@@ -23,21 +23,26 @@
 				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/sculpture.svg">
 			</div>
 		</a>
-		<div class="home_item item3 grid-item outer_inner_shadow">
+		<a class="home_item item3 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/artnum">
 			<div class="inner color3 inner_shadow">
-				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/artnum.svg">
+				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/artnum.svg)">
 			</div>
-		</div>
-		<div class="home_item item4 grid-item outer_inner_shadow">
+
+		</a>
+		<a class="home_item item4 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/tableaux">
 			<div class="inner color4 inner_shadow">
 				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/tableaux.svg)">
 			</div>
-		</div>
-		<div class="home_item item5 grid-item outer_inner_shadow">
+
+		</a>
+
+		<a class="home_item item5 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/technique">
 			<div class="inner color5 inner_shadow">
 				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/technique.svg)">
 			</div>
-		</div>
+
+		</a>
+
 		<div class="home_item   outer_inner_shadow grid-item dernieres" style="width:80%; margin-left:10%">
 			<div class="inner color6 inner_shadow">
 				<div class="dernieres_category"><img  src="<?php echo get_template_directory_uri() ?>/images/dernieres.svg)"></div>

@@ -17,6 +17,31 @@ body {
   font-family: sans-serif;
 }
 
+.selected_menu {
+  background-color: #fff;
+  border-bottom : 10 px solid #777;
+  padding: 5px;
+}
+
+.hide_chevron {
+  display: none;
+}
+
+.pagination
+{position: fixed;
+  font-size: 30vh;
+  top: 30vh;
+  color: #888;
+  text-decoration: none;
+  opacity: 0.3;}
+
+  .pagination-next
+  { right: 20px;}
+
+  .pagination-prev
+  { left: 20px;}
+
+
 /* ---- isotope ---- */
 .comments {
 	line-height:0;

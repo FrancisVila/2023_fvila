@@ -356,6 +356,16 @@ function fv_artworks($type='sculpture') {
 
 }
 
+function fv_select_class($url, $menu_item) {
+	
+if (strpos( $url, $menu_item ) !== false) {
+	echo 'selected_menu'; }
+else
+	{echo 'unselect';}
+
+}
+
+
 function fv_artworks2($type='sculpture') {
 	$tax_arr = array( 1, 2, 3, 4, 5,6, 7, 8, 9 );
 	$the_query = new WP_Query( array(
@@ -377,22 +387,20 @@ function fv_artworks2($type='sculpture') {
 		$fimage = get_post_field( 'featured_image_field' );
 		// the_field( 'featured_image_field' ); // echoes url of featured image 
 		$url = get_field( 'featured_image_field' );
+		$perma = get_permalink();
 		$output = <<<EOD
 		
-
 		
+
+		<a href="$perma">
 		<div class="grid-item2">
 
 		  <img src="$url"  class="category" />
 			  <p class="comments comments2 anim2">ttt </p>
 
 		</div>
-		<div class="grid-item2">
+		</a>
 
-		  <img src="$url"  class="category" />
-			  <p class="comments comments2 anim2">ttt </p>
-
-		</div>
 
 
 		EOD;
