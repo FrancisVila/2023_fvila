@@ -6,6 +6,34 @@ Author:         Francis Vila
 Author URI:     http://example.com/about/
 Version:        0.1.0
 */
+div.home_body a.home_item {
+
+  position:relative;
+}
+
+img.technique_home {
+  height: 100%;
+}
+
+div.technique_home {
+  height: 70%;
+}
+
+div.home_body a.home_item img.topleft {
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: #FFFFFFAA;
+  max-width: 40%;
+  padding : 2%;
+}
+
+div.home_body a.home_item img.fillFrame {
+width:100%;
+height:100%;
+}
+
+
 
 
 * { box-sizing: border-box; }
@@ -493,6 +521,13 @@ height: 20vmin;
 margin: 2vw;
    }
 
+   .home_item.dernieres > .inner img.dernieres_titre {
+    object-fit: cover;
+  width: 20vmin;
+opacity: 0.7;
+  margin: 2vw;
+   }
+
   .home_item.dernieres > .inner > img.category {
     width:50%;
     margin:5%;
@@ -549,7 +584,7 @@ text-align: center;}
     /* background-color: #FF8800; /* orange */
 			/* height: calc(40% - 30px); */
 	width: calc(33% - 80px);
-  margin: 30px;
+  margin: 2%;
   }
 	.home_container {
 			left: 2vw;

@@ -13,39 +13,37 @@
 			<img src="<?php echo get_template_directory_uri() ?>/images/fvila_fr3.png)">
 		</div>
 		<a class="home_item item1 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/dessins">
-			<div class="inner color1 inner_shadow">
-				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/dessins.svg)">
-			</div>
+			<img class="topleft" src="<?php echo get_template_directory_uri() ?>/images/dessins2.svg">
+			<img class="fillFrame" src="<?php echo get_template_directory_uri() ?>/images/adrawing.jpg"> 
 
 		</a>
-		<a class="home_item item2 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/sculpture">
-			<div class="inner color2 inner_shadow">
-				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/sculpture.svg">
-			</div>
+		<a  class="home_item item2 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/sculpture">
+
+				<img class="topleft" src="<?php echo get_template_directory_uri() ?>/images/sculpture2.svg">
+				<img class="fillFrame" src="<?php echo get_template_directory_uri() ?>/images/apsara2.jpg"> 
+
 		</a>
 		<a class="home_item item3 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/artnum">
-			<div class="inner color3 inner_shadow">
-				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/artnum.svg)">
-			</div>
+			<img class="topleft" src="<?php echo get_template_directory_uri() ?>/images/artnum2.svg">
+			<img class="fillFrame" src="<?php echo get_template_directory_uri() ?>/images/vag_crop.jpg"> 
 
 		</a>
 		<a class="home_item item4 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/tableaux">
-			<div class="inner color4 inner_shadow">
-				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/tableaux.svg)">
-			</div>
+			<img class="topleft" src="<?php echo get_template_directory_uri() ?>/images/tableaux2.svg">
+			<img class="fillFrame" src="<?php echo get_template_directory_uri() ?>/images/unTableau.jpg"> 
 
 		</a>
 
 		<a class="home_item item5 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/technique">
-			<div class="inner color5 inner_shadow">
-				<img class="category" src="<?php echo get_template_directory_uri() ?>/images/technique.svg)">
+			<div class="technique_home inner color5 inner_shadow">
+				<img class="category technique_home" src="<?php echo get_template_directory_uri() ?>/images/technique.svg)">
 			</div>
 
 		</a>
 
 		<div class="home_item   outer_inner_shadow grid-item dernieres" style="width:80%; margin-left:10%">
 			<div class="inner color6 inner_shadow">
-				<div class="dernieres_category"><img  src="<?php echo get_template_directory_uri() ?>/images/dernieres.svg)"></div>
+			<img class="dernieres_titre" src="<?php echo get_template_directory_uri() ?>/images/dernieres.svg)">
 
 					<?php
 					$recent_posts = wp_get_recent_posts(array('post_type' => 'artwork', 'numberposts' => '10'));
