@@ -40,8 +40,8 @@ function theme_scripts2() {
 theme_scripts2();
 add_action('wp_enqueue_scripts', 'theme_scripts2');
 
-wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
-echo '<script>console.log("postcount = $postcount")</script>';
+# XXX wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
+# echo '<script>console.log("postcount = $postcount")</script>';
 
 add_action( 'wp_enqueue_style', 'my_theme_enqueue_styles' );
 do_action( 'wp_enqueue_style' );
