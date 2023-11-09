@@ -9,7 +9,7 @@ var $grid = $('.grid2').isotope({
   // percentPosition: true,
   masonry: {
     // columnWidth: '.grid-sizer',
-		// gutter: 100,
+		// gutter: 5,
 		fitWidth: true,
 		// columnWidth: 400,
   }
@@ -17,10 +17,10 @@ var $grid = $('.grid2').isotope({
 // layout Isotope after each image loads
 
 $grid.imagesLoaded().progress( function() {
-  fffffffffffffff();
-  alert('yyyyyyyyyyyy');  
+  
+
   console.log('TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT')
-  // $grid.isotope('layout');
+  $grid.isotope('layout');
   
 });  
 
