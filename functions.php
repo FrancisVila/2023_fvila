@@ -291,7 +291,7 @@ function fv_get_other_images($post) {
 	   $image_2 $image_3 $image_4 $image_5 $image_6 $image_7 $image_8 $image_9 $image_10
 
 	EOD;
-	return $output; 
+	return $output;  
 	}
 
 // function fv_get_single_featured_image($post) {
