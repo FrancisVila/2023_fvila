@@ -7,12 +7,31 @@ Author URI:     http://example.com/about/
 Version:        0.1.0
 */
 
+div.aboutme {
+  text-align: center;
+  width: 100%;
+}
+div.aboutme h2, div.aboutme p {
+  font-size: 2rem;
+}
+
+div.singleImageBack {
+  height: 100vh; width: 100vw;    
+  max-height: 100vh; 
+  max-width: 100vw;
+
+   
+  background-size:contain; 
+  background-position: center;
+  background-repeat:no-repeat;
+}
+
 .editLink {
   color:#999;
   text-decoration: none;
-  position: relative;
-  left: -50px;
-  top: -20px
+  position: fixed;
+  right: 10px;
+  top: 5px;
 }
 
 div.home_body a.home_item {
@@ -40,6 +59,7 @@ div.home_body a.home_item img.topleft {
 div.home_body a.home_item img.fillFrame {
 width:100%;
 height:100%;
+object-fit : cover;
 }
 
 
@@ -57,7 +77,6 @@ body {
 .selected_menu {
   background-color: #fff;
   border-bottom : 10 px solid #777;
-  padding: 5px;
 }
 
 .hide_chevron {
@@ -249,7 +268,7 @@ justify-content: center;
 }
 
 .logo_item_simple img {
-  width: 55%;
+  width: 40%;
   
 }
 
@@ -594,7 +613,7 @@ text-align: center;}
 @media (max-aspect-ratio:2.5) {
   .home_item {
     /* background-color: #FF8800; /* orange */
-			/* height: calc(33% - 80px); */
+	height: 33vh; 
 	width: calc(29%);
   margin: 2%;
   }

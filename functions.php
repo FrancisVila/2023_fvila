@@ -56,7 +56,7 @@ function get_url_from_thumbnail_id($id, $size='medium') {
 	if ($large_image_url_array) {
 		return $large_image_url_array[0];
 	}
-	else return " AAAAAA ";
+	else return "";
 }
 
 

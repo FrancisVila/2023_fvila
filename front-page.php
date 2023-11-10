@@ -10,7 +10,7 @@
 <div class="home_body">
 	<div class="home_container">
 		<div class=" home_item logo_item_simple">
-			<img src="<?php echo get_template_directory_uri() ?>/images/fvila_fr3.png)">
+			<img src="<?php echo get_template_directory_uri() ?>/images/fvilamonsite.svg)">
 		</div>
 		<a class="home_item item1 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/dessins">
 			<img class="topleft" src="<?php echo get_template_directory_uri() ?>/images/dessins2.svg">
@@ -24,7 +24,7 @@
 
 		</a>
 		<a class="home_item item3 grid-item outer_inner_shadow" href="<?php echo get_site_url() ?>/category/artnum">
-			<img class="topleft" src="<?php echo get_template_directory_uri() ?>/images/artnum2.svg">
+			<img class="topleft" src="<?php echo get_template_directory_uri() ?>/images/artnum3.svg">
 			<img class="fillFrame" src="<?php echo get_template_directory_uri() ?>/images/vag_crop.jpg"> 
 
 		</a>
@@ -86,7 +86,13 @@
 				
 
 			</div>
+
 		</div>
+		<div class="aboutme">
+		<h2>A propos de moi</h2>
+<p>Je suis né en 1955. </p>
+<p>Ce site a été entièrement conçu et réalisé par moi, avec les outils de base offerts par la plateforme WordPress. </p>
+	</div>
 	</div>
 
 </div>
