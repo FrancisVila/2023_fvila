@@ -394,7 +394,7 @@ function fv_artworks2($type='sculpture') {
 		
 
 		<a href="$perma">
-		<div class="grid-item-4-isotope">
+		<div class="gridItem_Isotope">
 
 		  <img src="$url"  class="category" />
 			  <p class="comments comments2 anim2">$title </p>

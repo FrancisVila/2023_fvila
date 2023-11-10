@@ -99,18 +99,18 @@ padding-right: 100px;
 	font-family:  sans-serif;
 }
 
-.grid-item-4-isotope:hover {
+.gridItem_Isotope:hover {
 	cursor: pointer;
 }
 
-.grid-item-4-isotope:hover .anim1 {  
+.gridItem_Isotope:hover .anim1 {  
 	-webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 	  -webkit-animation-duration: 2s;
   animation-duration: 2s;
 	opacity:1;
 }
-.grid-item-4-isotope:hover .anim2 {  
+.gridItem_Isotope:hover .anim2 {  
 	-webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 	  -webkit-animation-duration: 3s;
@@ -129,7 +129,7 @@ padding-right: 100px;
 /* ---- .grid-item ---- */
 
 .grid-sizer2,
-.grid-item-4-isotope {
+.gridItem_Isotope {
   width: 400px;
 }
 
@@ -137,7 +137,7 @@ padding-right: 100px;
   margin: 0 auto;
 }
 
-.grid-item-4-isotope {
+.gridItem_Isotope {
   float: left;
 	padding:50px;
 	margin: 50px;
@@ -147,14 +147,14 @@ padding-right: 100px;
 	box-shadow: rgba(0, 0, 0, 0.30) -2px 4px 10px -1px inset, rgba(0, 0, 0, 0.57) -2px 10px 25px -1px ;
 }
 
-.grid-item-4-isotope img {
+.gridItem_Isotope img {
   display: block;
   max-width: 100%;
   width:400px;
 }
 
 
-.grid2 .grid-item-4-isotope img{
+.grid2 .gridItem_Isotope img{
 	/* for more, click here: http://www.debray-jerome.fr/outils/Generateur-de-box-shadow-css3.html */
 -moz-box-shadow: 3px 3px 5px 0px #9b9b9b;
 -webkit-box-shadow: 3px 3px 5px 0px #9b9b9b;

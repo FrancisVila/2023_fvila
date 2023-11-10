@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 
 // init Isotope
 var $grid = $('.grid2').isotope({
-  itemSelector: '.grid-item-4-isotope',
+  itemSelector: '.gridItem_Isotope',
   // percentPosition: true,
   masonry: {
     // columnWidth: '.grid-sizer',
