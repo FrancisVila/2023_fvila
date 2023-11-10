@@ -6,7 +6,7 @@ get_header();
 // $url = fv_get_single_featured_image($post);
 $featured_url =  get_field('featured_image_field'); 
 $others = fv_get_other_images($post);
-
+$body = get_the_content( $post->ID );
 $title = get_the_title($post);
 $id = $post->ID;
 $editUrl = get_edit_post_link( $id ); 
@@ -17,9 +17,13 @@ $output = <<<EOD
 <img class='single_featured_image chevron_before chevron_after' src='$featured_url' /> 
 <a href="$editUrl" class='editLink'>edit></a>
 </div>
+<div class='more_in_single'>
 <div class="more_images">
 $others
 </div>
+<div class="more_body">$body</div>
+</div>
+
 EOD;
 echo $output;
 

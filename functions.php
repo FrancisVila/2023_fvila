@@ -3,7 +3,9 @@
 // function custom_theme_features()  {
 
 //     // Add theme support for Featured Images
-//     add_theme_support( 'post-thumbnails' );
+ add_theme_support( 'post-thumbnails' );
+ the_post_thumbnail( array( 200, 200 ) ); 
+ the_post_thumbnail('thumbnail' ); 
 // }
 
 // // Hook into the 'after_setup_theme' action

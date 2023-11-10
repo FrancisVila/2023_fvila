@@ -445,15 +445,18 @@ img.more_images {
   max-width:35vmax;
 
 }
-div.more_images {
-  max-width:80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+div.more_in_single {
+  text-align: center;
+  width:75vmax;
+  margin-left: 13vmax;
+  
 }
-
+div.more_images {
+margin-top: 10vmin;
+}
+div.more_body {
+  text-align:left;
+}
 div.main_image p.description {
   width:100%;
 }
