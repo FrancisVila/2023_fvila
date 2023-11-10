@@ -287,7 +287,7 @@ function fv_get_other_images($post) {
 	$next_post = get_next_post_link( $format = '%link',  $link = '&rsaquo;' );
 	$prev_post = get_previous_post_link($format = '%link',  $link = '&lsaquo;' );
 	$output = <<<EOD
-
+		$other_images_title
 	   $image_2 $image_3 $image_4 $image_5 $image_6 $image_7 $image_8 $image_9 $image_10
 
 	EOD;
@@ -370,6 +370,7 @@ function fv_artworks2($type='sculpture') {
 	$tax_arr = array( 1, 2, 3, 4, 5,6, 7, 8, 9 );
 	$the_query = new WP_Query( array(
 		'post_type' => 'artwork',
+        'posts_per_page' => '30',
 		'tax_query' => array(
 			array (
 				'taxonomy' => 'artwork',
@@ -393,10 +394,10 @@ function fv_artworks2($type='sculpture') {
 		
 
 		<a href="$perma">
-		<div class="grid-item2">
+		<div class="grid-item-4-isotope">
 
 		  <img src="$url"  class="category" />
-			  <p class="comments comments2 anim2">ttt </p>
+			  <p class="comments comments2 anim2">$title </p>
 
 		</div>
 		</a>
