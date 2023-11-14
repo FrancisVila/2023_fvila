@@ -8,6 +8,10 @@
  the_post_thumbnail('thumbnail' ); 
 // }
 
+
+
+
+
 // // Hook into the 'after_setup_theme' action
 // add_action( 'after_setup_theme', 'custom_theme_features' );
 function theme_scripts() {
@@ -223,8 +227,9 @@ function load_animate_css() {
   // purpose: change favicon for admin 
   function favicon4admin() {
 	$wpurl = get_bloginfo('wpurl');
+	$faviconAdmin = get_theme_root_uri() . '/2023_fvila/images/faviconAdmin.png';
 	$link = <<<EOD
-	<link rel="Shortcut Icon" type="image/x-icon" href="$wpurl/wp-content/images/faviconAdmin.png" />
+	<link rel="Shortcut Icon" type="image/x-icon" href="$faviconAdmin" />
 	EOD;
 	echo $link;
 	}
@@ -262,6 +267,7 @@ function fv_show_other_images($post) {
 }
 
 function fv_get_other_images($post) {
+	$output = "";
 	get_post_meta($post->ID);
 	$fimage   = get_the_post_thumbnail( $post->ID, 'thumbnail' );
 	$image_a  = get_field('featured_image_field');
@@ -275,6 +281,7 @@ function fv_get_other_images($post) {
 	$image_9  = get_field("image_9");
 	$image_10 = get_field("image_10");
 	$other_images_title = "";
+	
 	if ($image_2 or $image_3 or $image_4 or $image_5 or $image_6 or $image_7 or $image_8 or $image_9 or $image_10)
 		{$other_images_title = '<h2>Dessins préparatoires, autres vues... </h2>'; }
 	if ($image_2) {$image_2 = '<img src="' . $image_2 . '" class="more_images" />' ;}
@@ -289,10 +296,12 @@ function fv_get_other_images($post) {
 	$next_post = get_next_post_link( $format = '%link',  $link = '&rsaquo;' );
 	$prev_post = get_previous_post_link($format = '%link',  $link = '&lsaquo;' );
 	$output = <<<EOD
+	<div id="moreStuff">
 		$other_images_title
 	   $image_2 $image_3 $image_4 $image_5 $image_6 $image_7 $image_8 $image_9 $image_10
-
+	</div>
 	EOD;
+	
 	return $output;  
 	}
 
@@ -396,7 +405,7 @@ function fv_artworks2($type='sculpture') {
 		
 
 		<a href="$perma">
-		<div class="gridItem_Isotope">
+		<div class="gridItem_Isotope gridItem_frame gridItem_400 gridItem_pad">
 
 		  <img src="$url"  class="category" />
 			  <p class="comments comments2 anim2">$title </p>

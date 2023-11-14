@@ -11,6 +11,7 @@ var $grid = $('.grid2').isotope({
     // columnWidth: '.grid-sizer',
 		// gutter: 5,
 		fitWidth: true,
+    transitionDuration: 800
 		// columnWidth: 400,
   }
 });
