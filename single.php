@@ -5,8 +5,9 @@
 // $featured_url = fv_get_single_featured_image($post);
 // $url = fv_get_single_featured_image($post);
 $featured_url =  get_field('featured_image_field'); 
-$others = fv_get_other_images($post);
-$body = get_the_content( $post->ID );
+
+$body = "<div class='more_body'>" . get_the_content( $post->ID ) . "</div>";
+$others = fv_get_other_images($post, $body);
 $title = get_the_title($post);
 $id = $post->ID;
 $editUrl = get_edit_post_link( $id ); 
@@ -20,21 +21,36 @@ $prev_post_obj  = get_adjacent_post( '', '', true );
 $prev_post_ID   = isset( $prev_post_obj->ID ) ? $prev_post_obj->ID : '';
 $first_post_class = isset( $prev_post_obj->ID ) ? '' : 'hide_chevron';
 $prev_post_link     = get_permalink( $prev_post_ID );
+$categories = get_the_category($id);
+$fields = get_fields($post->ID);
+$space = " - ";
 
+$siteUrl = get_site_url();
+if ($fields)  
+    {
+    $category = $fields["artwork"][0]->name;
+    if ($category) 
+        {
+        $catlink = "<a href='$siteUrl/category/$category' class='linkBackToCat' >&lt; back to $category</a>";
+        echo $catlink;  
+        }
+    }
 $output = <<<EOD
-
-
-<div class="singleImageBack" style="background-image: url('$featured_url')">
+<div class="singleImageBack"  style="text-align:center">
+<img src='$featured_url' style="max-width:100vw; max-height: 100vh" />
+</div>
 <a href="$editUrl" class='editLink'>edit></a></div>
 
 <h1 class="single_title">$title</h1>
 
 <div class='more_in_single'>
+
 <div class="more_images">
 
 $others
+
 </div>
-<div class="more_body">$body</div>
+
 </div>
 <textarea id="nextUrl" style="display:none">$next_post_link</textarea>
 <textarea id="prevUrl" style="display:none">$prev_post_link</textarea>

@@ -261,12 +261,12 @@ function artworks() {
 }
 
 
-function fv_show_other_images($post) {
+function fv_show_other_images($post, $postBody="") {
 	$output = fv_get_other_images($post);
 	echo $output;
 }
 
-function fv_get_other_images($post) {
+function fv_get_other_images($post, $postBody="") {
 	$output = "";
 	get_post_meta($post->ID);
 	$fimage   = get_the_post_thumbnail( $post->ID, 'thumbnail' );
@@ -282,8 +282,9 @@ function fv_get_other_images($post) {
 	$image_10 = get_field("image_10");
 	$other_images_title = "";
 	
-	if ($image_2 or $image_3 or $image_4 or $image_5 or $image_6 or $image_7 or $image_8 or $image_9 or $image_10)
-		{$other_images_title = '<h2>Dessins préparatoires, autres vues... </h2>'; }
+	if ($image_2 or $image_3 or $image_4 or $image_5 or $image_6 or $image_7 or $image_8 or $image_9 or $image_10 )
+		{$other_images_title = '<h2 class="moreTitle">Dessins préparatoires, autres vues... </h2>'; }
+		
 	if ($image_2) {$image_2 = '<img src="' . $image_2 . '" class="more_images" />' ;}
 	if ($image_3) {$image_3 = '<img src="' . $image_3 . '" class="more_images" />' ;}
 	if ($image_4) {$image_4 = '<img src="' . $image_4 . '" class="more_images" />' ;}
@@ -298,6 +299,7 @@ function fv_get_other_images($post) {
 	$output = <<<EOD
 	<div id="moreStuff">
 		$other_images_title
+		$postBody
 	   $image_2 $image_3 $image_4 $image_5 $image_6 $image_7 $image_8 $image_9 $image_10
 	</div>
 	EOD;
@@ -400,6 +402,7 @@ function fv_artworks2($type='sculpture') {
 		// the_field( 'featured_image_field' ); // echoes url of featured image 
 		$url = get_field( 'featured_image_field' );
 		$perma = get_permalink();
+		$body = get_the_content();
 		$output = <<<EOD
 		
 		
@@ -408,7 +411,11 @@ function fv_artworks2($type='sculpture') {
 		<div class="gridItem_Isotope gridItem_frame gridItem_400 gridItem_pad">
 
 		  <img src="$url"  class="category" />
-			  <p class="comments comments2 anim2">$title </p>
+
+			  <div class="comments comments2 anim2">
+			  <p>$title</p>
+			  </div>
+			  
 
 		</div>
 		</a>

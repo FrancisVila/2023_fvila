@@ -7,6 +7,21 @@ Author URI:     http://example.com/about/
 Version:        0.1.0
 */
 
+.linkBackToCat {
+  position: absolute;
+  z-index: 100;
+  top: 5px;
+  left: 5px;
+  font-size: 2vmin;
+  color:#00000080;
+  text-decoration: none;
+}
+
+#moreStuff {
+  display:flex;
+  flex-wrap: wrap;
+}
+
 div.aboutme {
   text-align: center;
   width: 100%;
@@ -16,7 +31,7 @@ div.aboutme h2, div.aboutme p {
 }
 
 div.singleImageBack {
-  height: 100vh; width: 100vw;    
+  width: 100vw;    
   max-height: 100vh; 
   max-width: 100vw;
 
@@ -170,7 +185,7 @@ padding-right: 100px;
 }
 
 .gridItem_400 {
-  width:400px;
+  width:500px;
 }
 
 .grid2 .gridItem_Isotope img{
@@ -465,9 +480,11 @@ div.main_image {
   justify-content: center;
   flex-direction: column;
 }
-img.more_images {
-  max-width:25vmax;
-margin: 2vmax;
+img.more_images, div.more_body, h2.moreTitle {
+
+max-width: 10vmax;
+  margin: 2vmax;
+  width: 25vmax;
 }
 div.more_in_single {
   text-align: center;

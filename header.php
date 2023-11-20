@@ -13,6 +13,7 @@
 
 <?php wp_head(); ?>
 <?php global $wp; $url = add_query_arg( $wp->query_vars, home_url( $wp->request ) ); ?>
+<meta name='viewport' content='width=device-width'>
 </head>
 <body >
 
