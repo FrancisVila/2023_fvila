@@ -43,7 +43,7 @@ $output = <<<EOD
 </div>
 <a href="$editUrl" class='editLink'>edit></a></div>
 
-<h1 class="single_title">$title</h1>
+<h1 class="single_title">$title...</h1>
 
 <div class='more_in_single'>
 
