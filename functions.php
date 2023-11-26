@@ -369,14 +369,57 @@ function fv_artworks($type='sculpture') {
 
 }
 
-function fv_select_class($url, $menu_item) {
-	
-if (strpos( $url, $menu_item ) !== false) {
-	echo 'selected_menu'; }
-else
-	{echo 'unselect';}
 
+function show_menu($url, $known_category="") {
+	$site_url = get_site_url();
+	$templateDirectory = get_template_directory_uri();
+	$dessins_class = fv_get_select_class($url, "dessins", $known_category);
+	$sculpture_class = fv_get_select_class($url, "sculpture", $known_category);
+	$artnum_class = fv_get_select_class($url, "artnum", $known_category);
+	$tableaux_class = fv_get_select_class($url, "tableaux", $known_category);
+	$technique_class = fv_get_select_class($url, "technique", $known_category);
+	$menu_output = <<<EOD
+	<div class="menu_container">
+		<div id="page">
+
+			<div id="header" role="banner">
+
+				<div id="headerimg">
+					<a href="$site_url"><img class="menu_logo" src="$templateDirectory/images/fvila_fr2.png"></a>	
+					<a class="" href="$site_url/category/dessins"><img class="$dessins_class menu_item" src="$templateDirectory/images/dessins3.svg"></a>
+					<a class="" href="$site_url/category/sculpture"><img class="$sculpture_class menu_item" src="$templateDirectory/images/sculpture3.svg"></a>
+					<a class="" href="$site_url/category/artnum"><img class="$artnum_class menu_item" src="$templateDirectory/images/artnum3.svg"></a>
+					<a class="" href="$site_url/category/tableaux"><img class="$tableaux_class menu_item" src="$templateDirectory/images/tableaux3.svg"></a>
+					<a class="" href="$site_url/category/technique"><img class="$technique_class menu_item" src="$templateDirectory/images/technique3.svg"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	EOD;
+	echo $menu_output;
+	
 }
+
+function fv_get_select_class($url, $menu_item, $known_category) {
+	if ($menu_item == $known_category) 
+		{
+			return 'selected_menu';}
+	else
+	{ if (strpos( $url, $menu_item ) !== false) 
+		{return 'selected_menu'; }
+	  else
+		{return 'unselect';}
+	}
+	}
+
+	function fv_select_class($url, $menu_item) {
+	
+		if (strpos( $url, $menu_item ) !== false) {
+			echo 'selected_menu'; }
+		else
+			{echo 'unselect';}
+		
+		}
 
 
 function fv_artworks2($type='sculpture') {

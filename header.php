@@ -6,7 +6,7 @@
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, user-scalable=no">
 </style>
 
 
@@ -25,25 +25,7 @@
 <h1> 
 	 </h1>
 	<div id="headerimg">
-		<div class="menu_container">
-		<a href="<?php echo home_url(); ?>"><img class="menu_logo" src="<?php echo get_template_directory_uri() ?>/images/fvila_fr2.png)"></a>	
-		<a class="" href="<?php echo get_site_url() ?>/category/dessins">
-			<img class="<?php fv_select_class($url, "dessins")?> menu_item" src="<?php echo get_template_directory_uri() ?>/images/dessins3.svg)">
-		</a>
-		<a class="" href="<?php echo get_site_url() ?>/category/sculpture">
-			<img class="<?php fv_select_class($url, "sculpture")?> menu_item" src="<?php echo get_template_directory_uri() ?>/images/sculpture3.svg)">
-		</a>
-		<a class="" href="<?php echo get_site_url() ?>/category/artnum">
-			<img class="<?php fv_select_class($url, "artnum")?> menu_item" src="<?php echo get_template_directory_uri() ?>/images/artnum3.svg)">
-		</a>
-		<a class="" href="<?php echo get_site_url() ?>/category/tableaux">
-			<img class="<?php fv_select_class($url, "tableaux")?> menu_item" src="<?php echo get_template_directory_uri() ?>/images/tableaux3.svg)">
-		</a>
-		<a class="" href="<?php echo get_site_url() ?>/category/technique">
-			<img class="<?php fv_select_class($url, "technique")?> menu_item" src="<?php echo get_template_directory_uri() ?>/images/technique3.svg)">
-		</a>
-</div>
-		<div class="description"><?php bloginfo( 'description' ); ?></div>
+		<?php show_menu($url, "") ?><div class="description"><?php bloginfo( 'description' ); ?></div>
 	</div>
 </div>
 

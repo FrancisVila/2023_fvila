@@ -26,6 +26,7 @@ $fields = get_fields($post->ID);
 $space = " - ";
 
 $siteUrl = get_site_url();
+$cat = "";
 if ($fields)  
     {
     $category = $fields["artwork"][0]->name;
@@ -33,6 +34,7 @@ if ($fields)
         {
         $catlink = "<a href='$siteUrl/category/$category' class='linkBackToCat' >&lt; back to $category</a>";
         echo $catlink;  
+        $cat = $category;
         }
     }
 $output = <<<EOD
@@ -66,5 +68,7 @@ get_header();
 <a href="<?php echo $prev_post_link; ?>" rel="prev" class="aaa  <?php echo $first_post_class; ?> bbb pagination-prev pagination">‹</a>
 <a href="<?php echo $next_post_link; ?>" rel="next" class="aaa <?php echo $last_post_class; ?> <?php $wp_query->current_post ?>  
 <?php echo $last_post_class; ?> bbb pagination-next pagination">›</a>
+
+
 
 
