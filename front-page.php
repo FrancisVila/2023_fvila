@@ -91,7 +91,7 @@
 		</div>
 		<div class="aboutme">
 		<h2>A propos de moi</h2>
-<p>Je suis né en 1955. </p>
+<p>Je suis né en 1955... </p>
 <p>Ce site a été entièrement conçu et réalisé par moi, avec les outils de base offerts par la plateforme WordPress. </p>
 	</div>
 	</div>
