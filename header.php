@@ -5,7 +5,7 @@
 <title><?php echo wp_get_document_title(); ?></title>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+ 
 <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, user-scalable=no">
 </style>
 
