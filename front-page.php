@@ -34,14 +34,16 @@
 
 		</a>
 
-		<a class="home_item item5 grid-item outer_inner_shadow gridItem_Isotope" href="<?php echo get_site_url() ?>/category/technique">
-			<div class="technique_home inner color5 inner_shadow">
-				<img class="category technique_home" src="<?php echo get_template_directory_uri() ?>/images/technique.svg)">
-			</div>
-
-		</a>
-		</div>
+		<a class="home_item item4 grid-item outer_inner_shadow gridItem_Isotope gridItem_frame" href="<?php echo get_site_url() ?>/category/tableaux">
 		
+			<img  class="middleInFrame " src="<?php echo get_template_directory_uri() ?>/images/technique.svg)">
+			<img class="fillFrame" style="opacity:0" src="<?php echo get_template_directory_uri() ?>/images/unTableau.jpg"> 
+			
+		</a>
+
+		
+
+		</div>
 		<div class="home_item    dernieres " style="width:80%; margin-left:10%">
 			<div class="inner color6 inner_shadow">
 			<img class="dernieres_titre" src="<?php echo get_template_directory_uri() ?>/images/dernieres.svg)">

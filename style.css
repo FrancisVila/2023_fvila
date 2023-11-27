@@ -53,6 +53,10 @@ div.singleImageBack {
 div.home_body a.home_item {
 
   position:relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img.technique_home {
@@ -71,6 +75,13 @@ div.home_body a.home_item img.topleft {
   max-width: 40%;
   padding : 2%;
 }
+
+div.home_body a.home_item img.middleInFrame {
+  position: absolute;
+  max-width: 60%;
+  padding : 2%;
+}
+
 
 div.home_body a.home_item img.fillFrame {
 width:100%;
@@ -621,22 +632,33 @@ margin-top: 100px;
 .home_item h2
 {font-size: calc(max(3vh,3vw));
 width: 100%;
-text-align: center;}
+text-align: center;
+
+}
 
 
 @media (min-aspect-ratio: 2.5) {
 
+  .home_item.dernieres {
+    position: absolute;
+    top: 100vh; top: 100lvh;
+  }
 
   .home_item {
     /* background-color: #F00; /* red */
 			/* height: calc(100% - 20px); */
-	width: calc(20% - 50px);
+	width: calc(25% - 50px);
   margin-right:2px;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
 	.home_container {
 		left: 5vw;
 	width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 	}
 }
 
