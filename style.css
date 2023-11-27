@@ -1046,7 +1046,8 @@ div.menu ul li.current_page_item {
 }
 
 div#wpadminbar {
-display:none;}
+
+}
 
 /**
  * 4.2 Navigation
@@ -1710,7 +1711,7 @@ slide-in {
 
   .home_item.dernieres {
     position: absolute;
-    top: 2120vh; top: 210lvh;
+    top: 210vh; top: 210lvh;
   }
 
   .home_item {
