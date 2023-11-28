@@ -638,7 +638,9 @@ text-align: center;
 
 
 @media (min-aspect-ratio: 2.5) {
-
+  .grid-item {
+    margin: 25px;
+  }
   .home_item.dernieres {
     position: absolute;
     top: 100vh; top: 100lvh;
@@ -647,19 +649,22 @@ text-align: center;
   .home_item {
     /* background-color: #F00; /* red */
 			/* height: calc(100% - 20px); */
-	width: calc(25% - 50px);
-  margin-right:2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+      height: 33vh; height: 33lvh; 
+      width: calc(29%);
+      margin: 2%;
   }
 	.home_container {
-		left: 5vw;
-	width: 90vw;
+		left: 15vw;
+	width: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
 	}
+
+  .home_item.dernieres {
+    position: absolute;
+    top: 80vh; top: 80lvh;
+  }
 }
 
 
