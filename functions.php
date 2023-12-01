@@ -473,6 +473,46 @@ function fv_artworks2($type='sculpture') {
 
 }
 
+function fv_techniques() {
+	$tax_arr = array( 1, 2, 3, 4, 5,6, 7, 8, 9 );
+	query_posts("category_name=technique");
+	// $query2 = new WP_Query(array('artwork' => 8));
+	echo '<div class="grid2 ">';
+	echo '<div class="grid-sizer2"></div>';
+	while ( have_posts() ) :
+		the_post();
+		$title = get_the_title();
+		$fimage = get_post_field( 'featured_image_field' );
+		// the_field( 'featured_image_field' ); // echoes url of featured image 
+		$url = get_field( 'featured_image_field' );
+		$perma = get_permalink();
+		$body = get_the_content();
+		$output = <<<EOD
+		
+		
+
+		<a href="$perma">
+		<div class="gridItem_Isotope gridItem_frame gridItem_400 gridItem_pad">
+
+
+			  
+			  <h1>$title</h1>
+			  $body
+			  
+
+		</div>
+		</a>
+
+
+
+		EOD;
+		echo $output;
+	endwhile;
+	echo '</div>';
+
+
+}
+
 function fv_art_gallery($category) {
 	$wpQuery = new WP_Query( array(
 		'post_type'         => array( 'post' ),

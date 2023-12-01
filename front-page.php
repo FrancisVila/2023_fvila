@@ -34,7 +34,7 @@
 
 		</a>
 
-		<a class="home_item item4 grid-item outer_inner_shadow gridItem_Isotope gridItem_frame" href="<?php echo get_site_url() ?>/category/tableaux">
+		<a class="home_item item4 grid-item outer_inner_shadow gridItem_Isotope gridItem_frame" href="<?php echo get_site_url() ?>/category/technique">
 		
 			<img  class="middleInFrame " src="<?php echo get_template_directory_uri() ?>/images/technique.svg)">
 			<img class="fillFrame" style="opacity:0" src="<?php echo get_template_directory_uri() ?>/images/unTableau.jpg"> 
