@@ -18,8 +18,7 @@ Version:        0.1.0
 }
 
 #moreStuff {
-  display:flex;
-  flex-wrap: wrap;
+  
 }
 
 div.aboutme {
@@ -495,9 +494,9 @@ div.main_image {
 }
 img.more_images, div.more_body, h2.moreTitle {
 
-max-width: 10vmax;
+
   margin: 2vmax;
-  width: 25vmax;
+  width: 50vw;
 }
 div.more_in_single {
   text-align: center;
