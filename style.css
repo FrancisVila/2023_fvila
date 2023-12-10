@@ -835,23 +835,12 @@ font-size: 20px;
 clear: both;
 }
 
-div.singlePost h1, div.singlePost h2, div.singlePost h3, div.singlePost h4, div.singlePost h5, body.home  h3 {
-font-family:steelfish;
-}
+
 
 
 
 h2.techPostTitle {
 font-family:sans-serif
-}
-
-div.singlePost h1 {
-font-size:70px; 
-font-family:steelfish;
-color:#888888 !important;
-text-align: left;
-margin-top:0px;
-margin-bottom:3rem;
 }
 
 div#page-title h1 {
@@ -863,39 +852,10 @@ margin-top:20px;
 margin-bottom:0px;
 }
 
-div.singlePost h2 {
-font-size:40px; 
-font-family:steelfish;
-color:#888888 !important;
-text-align: left;
-margin-top:3rem;
-margin-bottom:0px;
-}
-
-div.singlePost h3 {
-font-size:2.5rem; 
-letter-spacing:1px;
-font-family:steelfish;
-text-align: left;
-margin-top:1rem;
-margin-bottom:0px;
-color:#888888 !important;
-}
-
-div.singlePost h4 {
-letter-spacing:1px;
-font-size:2rem; 
-color:#888888 !important;
-font-family:steelfish;
-text-align: left;
-margin-top:1rem;
-margin-bottom:0px;
-}
 
 
-div.singlePost  {
-text-align: left;
-}
+
+
 
 div#page-title  {
 margin-left: 30px;
@@ -1464,9 +1424,7 @@ color: #4E932D !important;
 text-decoration:underline;
 }
 
-.singlePost a:link, .singlePost a:visited {
-text-decoration:underline;
-}
+
 
 
 
@@ -1475,17 +1433,7 @@ text-decoration:underline;
     padding-top: 25px; 
 }
 
-.singlePost {
- width:1024px; 
- max-width:90%;
- margin-left:auto; 
- margin-right: auto; 
- background-color: white; 
- padding:20px; 
- padding-top:10px;  
- margin-top:30px;
- box-shadow: 5px 5px 5px #555555;
-}
+
 
 /* D3 tree ***************************** */
 .node {
