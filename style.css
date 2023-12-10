@@ -635,6 +635,11 @@ text-align: center;
 
 }
 
+@media (hover: none) {
+
+
+}
+
 
 @media (min-aspect-ratio: 2.5) {
   .grid-item {
@@ -810,7 +815,7 @@ div.ascendoor-wrapper, div.ascendoor-page {
 	 
 
 	
-.entry-content {
+.excerpt-content {
 	color: #ffffff;
 	font-family: "Droid Sans", sans-serif;
 	font-size: 12px;
