@@ -7,6 +7,8 @@ Author URI:     http://example.com/about/
 Version:        0.1.0
 */
 
+h2 {font-size: 1.6rem;}
+p {font-size: 1rem;}
 .linkBackToCat {
   position: absolute;
   z-index: 100;
@@ -635,6 +637,7 @@ text-align: center;
 
 }
 
+/* only for mobile */
 @media (hover: none) {
 
 
