@@ -24,7 +24,7 @@ $prev_post_link     = get_permalink( $prev_post_ID );
 $categories = get_the_category($id);
 $fields = get_fields($post->ID);
 $space = " - ";
-
+ 
 $siteUrl = get_site_url();
 $cat = "";
 if ($fields)  
