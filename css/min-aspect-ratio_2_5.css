@@ -1,0 +1,31 @@
+.debug.min_25 {
+    display:block;
+}
+
+.grid-item {
+    margin: 25px;
+  }
+  .home_item.dernieres {
+    position: absolute;
+    top: 100vh; top: 100lvh;
+  }
+
+  .home_item {
+    /* background-color: #F00; /* red */
+			/* height: calc(100% - 20px); */
+      height: 33vh; height: 33lvh; 
+      width: calc(29%);
+      margin: 2%;
+  }
+	.home_container {
+		left: 15vw;
+	width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	}
+
+  .home_item.dernieres {
+    position: absolute;
+    top: 80vh; top: 80lvh;
+  }

@@ -8,6 +8,13 @@
 ?>
 <?php wp_head(); ?>
 <div class="home_body">
+<div style="position:absolute; top:0; left:100">
+	<p class="debug min_25">min_25</p>
+	<p class="debug max_25">max_25</p>
+	<p class="debug max_1">max_1</p>
+	<p class="debug max_05">max_05</p>
+	<p class="debug max_033">max_033</p>
+</div>
 	<div class="home_container ">
 		<div class=" home_item logo_item_simple gridItem_Isotope">
 			<img src="<?php echo get_template_directory_uri() ?>/images/fvilamonsite.svg)">

@@ -1,0 +1,15 @@
+
+.debug.max_25 {
+  display:block;
+}
+
+.home_item {
+  /* background-color: #FF8800; /* orange */
+height: 33vh; height: 33lvh; 
+width: calc(29%);
+margin: 2%;
+}
+.home_container {
+    left: 2vw;
+width: 96vw;
+}
