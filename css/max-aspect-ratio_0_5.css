@@ -13,27 +13,20 @@ margin: 2%;
 width: 96vw;
 }
 
-.home_item.dernieres {
-  position: absolute;
-  top: 120vh; top: 120lvh;
-}
 .home_item {
   /* background-color: #DDD; /* gray */
     /* height: calc(50% - 60px) */
-width: 45% ;
+    width: calc(100% - 40px);
 }
-
 
 .home_item.dernieres {
   position: absolute;
   top: 210vh; top: 210lvh;
 }
 
-.home_item {
-  /* background-color: #FF0; /* yellow */
-    /* height: calc(20% - 10px); */
-width: calc(100% - 40px);
-}
+
+
+
   .home_container {
     top: 0vh;
 height: 90vh; height: 90lvh;

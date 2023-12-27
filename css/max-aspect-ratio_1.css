@@ -6,7 +6,7 @@
 .home_item {
   /* background-color: #FF8800; /* orange */
 height: 33vh; height: 33lvh; 
-width: calc(29%);
+width: 45% ;
 margin: 2%;
 }
 .home_container {
@@ -17,9 +17,4 @@ width: 96vw;
   .home_item.dernieres {
     position: absolute;
     top: 120vh; top: 120lvh;
-  }
-  .home_item {
-    /* background-color: #DDD; /* gray */
-			/* height: calc(50% - 60px) */
-	width: 45% ;
   }
