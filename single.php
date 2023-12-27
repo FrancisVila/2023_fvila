@@ -1,6 +1,7 @@
 
 <?php
-
+theme_scriptsSingle();
+add_action('wp_enqueue_scripts', 'theme_scriptsSingle');
 
 // $featured_url = fv_get_single_featured_image($post);
 // $url = fv_get_single_featured_image($post);

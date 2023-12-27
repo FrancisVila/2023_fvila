@@ -6,7 +6,7 @@ Author:         Francis Vila
 Author URI:     http://example.com/about/
 Version:        0.1.0
 */
-
+@import url('./test.css')  (max-width: 4480px);
 h2 {font-size: 1.6rem;}
 p {font-size: 1rem;}
 .linkBackToCat {
@@ -898,12 +898,7 @@ width:100%;
 }
 
 body {
-background-image: url('images/black-Linen.jpg');
-background-image: url('images/paper2.png');
-background-image: url('images/paper_sq2.jpg');
-background-image: url('images/paper_sq3.png');
-background-image: url('images/paper4.jpg');
- background-image: url('images/paper_sq5.jpg');
+
 }
  
 body.home img.fvila,
@@ -1691,6 +1686,8 @@ slide-in {
     width: 100%;
   }
 }
+
+
 
 
 

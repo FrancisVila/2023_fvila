@@ -40,11 +40,15 @@ function theme_scripts() {
 theme_scripts();
 add_action('wp_enqueue_scripts', 'theme_scripts');
 
-function theme_scripts2() {
 
+
+function theme_scriptsSingle() {
+	wp_register_script( 'single', get_theme_root_uri() . '/2023_fvila/js/single.js' ); 
+    wp_enqueue_script( 'single' );
 }
-theme_scripts2();
-add_action('wp_enqueue_scripts', 'theme_scripts2');
+
+# next line moved to single.php
+# add_action('wp_enqueue_scripts', 'theme_scriptsSingle');
 
 # XXX wp_enqueue_style( 'child-style', get_template_directory_uri().'/style.css' );
 # echo '<script>console.log("postcount = $postcount")</script>';
