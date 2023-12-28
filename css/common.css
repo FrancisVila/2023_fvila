@@ -521,7 +521,7 @@ div.main_image p.description {
 .home_container {
 	/* position: absolute; */
 	top: 5vh; top: 5lvh;
-	height:80vh; height:80lvh;
+	/* height:80vh; height:80lvh; */
 	left: 20vw;
 	width: 60vw;
 
