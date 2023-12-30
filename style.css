@@ -22,7 +22,7 @@ Version:        0.1.0
 
 @import url('./css/max-aspect-ratio_0_33.css')  (max-aspect-ratio: 1/3);
 
-.debug {display:none !important;}
+.debug {display:none }
 
 
 /*  Chevron end */

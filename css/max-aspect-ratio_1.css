@@ -18,3 +18,8 @@ width: 96vw;
     position: absolute;
     top: 120vh; top: 120lvh;
   }
+  
+  #moreStuff {
+    margin-left: 20%;
+    width:60%;
+  }

@@ -7,7 +7,7 @@ add_action('wp_enqueue_scripts', 'theme_scriptsSingle');
 // $url = fv_get_single_featured_image($post);
 $featured_url =  get_field('featured_image_field'); 
 
-$body = "<div class='more_body'>" . get_the_content( $post->ID ) . "</div>";
+$body =  get_the_content( $post->ID ) ;
 $others = fv_get_other_images($post, $body);
 $title = get_the_title($post);
 $id = $post->ID;
@@ -46,15 +46,11 @@ $output = <<<EOD
 
 <h1 class="single_title">$title...</h1>
 
-<div class='more_in_single'>
 
-<div class="more_images">
 
 $others
 
-</div>
 
-</div>
 <textarea id="nextUrl" style="display:none">$next_post_link</textarea>
 <textarea id="prevUrl" style="display:none">$prev_post_link</textarea>
 EOD;

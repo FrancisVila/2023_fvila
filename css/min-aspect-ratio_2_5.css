@@ -29,3 +29,8 @@
     position: absolute;
     top: 80vh; top: 80lvh;
   }
+
+  #moreStuff {
+    margin-left: 25%;
+    width:50%;
+  }

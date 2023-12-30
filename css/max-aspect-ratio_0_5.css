@@ -42,3 +42,8 @@ div.home_body > div.home_container .logo_item_simple {
 .logo_item_simple img {
   width: 100%;
 }
+
+#moreStuff {
+  margin-left: 10%;
+  width:80%;
+}
